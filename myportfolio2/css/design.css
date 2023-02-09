@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+.design{
+    width: 100%;
+    padding: 0 2%;
+    box-sizing: border-box;
+    margin-top: 120px;
+}
+
+.design .design-wrap{
+    max-width: 1400px;
+    height: auto;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* box-sizing: border-box; */
+    padding: 25px 0;
+    background-color: #f0f0f3;
+    border-radius: 7px;
+}
+
+.design .design-wrap .title{width: 100%; text-align: center; margin: 20px 0;}
+.design .design-wrap .title img{width: 250px;}
+
+.design-content{width: 100%; height: 100%; align-items: center;}
+
+.work-wrap{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* padding-bottom: 100px; */
+    margin: 0 auto;
+}
+.work-content{
+    flex-basis: 32%;
+    /* border: 1px solid #ddd; */
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    /* box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.1); */
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+    /* background-color: #fff; */
+}
+.work-content .work-img{
+    width: 100%;
+    overflow: hidden;
+    font-size: 0;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.1);
+}
+.work-content .work-img img{width: 100%; transition: 0.3s; border-radius: 10px;}
+.work-content:hover .work-img img{transform: scale(1.1);}
+.work-content .work-desc{padding: 30px 0;}
+.work-content .work-desc h3{text-transform: uppercase; color: #70c6c8;}
+.work-content.b .work-desc h3{color: #dc373a;}
+.work-content.c .work-desc h3{color: #88a2bd;}
+.work-content .work-desc span{font-weight: bold; color: #434343;}
+.work-content .work-desc p{margin: 10px 0; text-transform: uppercase; color: #747474;}
+.work-content .work-desc p:nth-child(2){margin-top: 30px;}
+
+
+.footer{
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    /* background-color: #fff; */
+    padding: 25px 0;
+}
+.footer p{
+    text-align: center;
+    letter-spacing: -1px;
+    color: #9f9f9f;
+}
+
+
+.window{
+    position: fixed;
+    z-index: 120;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.window-content{
+    width: 65%;
+    position: fixed;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-y: scroll;
+    display: none;
+}
+
+.window-content i{
+    font-size: 1.5vw;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #434343;
+}
+.window-content img{width: 100%;}

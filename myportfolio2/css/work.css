@@ -1,0 +1,222 @@
+@charset "utf-8";
+
+.work{
+    width: 100%;
+    padding: 0 2%;
+    box-sizing: border-box;
+    margin-top: 120px;
+}
+
+.work .work-f-wrap{
+    max-width: 1400px;
+    height: auto;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* box-sizing: border-box; */
+    padding: 25px 0;
+    background-color: #f0f0f3;
+    border-radius: 7px;
+}
+
+.work .work-f-wrap .title{width: 100%; text-align: center; margin: 20px 0;}
+.work .work-f-wrap .title img{width: 250px;}
+
+.content{width: 100%;}
+.work-wrap{max-width: 1200px; margin: 0 auto; padding-bottom: 100px;}
+.work-content{
+    border-radius: 5px;
+    padding: 50px 30px 100px;
+    /* background-color: #fff; */
+    /* box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.05); */
+    display: flex;
+    /* border: 1px solid #ddd; */
+    margin-bottom: 100px;
+}
+.work-content:last-child{margin-bottom: 0;}
+.work-content:nth-child(2n) .work-img{order: 2;}
+.work-content:nth-child(2n) .work-desc{order: 1;}
+.work-content .work-img{flex-basis: 48%; position: relative;}
+.work-content .work-img img{width: 100%;}
+
+.work-content .work-img .pc{width: 85%; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; overflow: hidden;}
+.work-content .work-img .pc::after{
+    content: "";
+    position: absolute; width: 93%; height: 63%;
+    background: url("../images/Artboard\ 1\ copyd3.jpg");
+    background-size: cover;
+    left: 15px; top: 18px;
+    background-position: center top;
+    transition: 5s;
+    /* transition 대신 호버 사용하면 마우스 떼면 뚝 끊기는 느낌 둘중에 골라서 쓰면 됨 */
+}
+
+.work-content .work-img > div:hover::after{
+    background-position: center bottom;
+}
+
+.work-content .work-img .tablte{position: absolute; width: 35%; right: 0; bottom: 0; overflow: hidden;}
+.work-content .work-img .tablte::after{
+    content: "";
+    position: absolute; width: 87%; height: 82%;
+    background: url("../images/Artboard\ 1\ copyd2.jpg");
+    background-size: cover;
+    left: 14px; top: 21px;
+    background-position: center top;
+    transition: 2s;
+}
+
+.work-content .work-img .mobile{position: absolute; width: 23%; left: 0; bottom: 0; overflow: hidden;}
+.work-content .work-img .mobile::after{
+    content: "";
+    position: absolute; width: 91%; height: 94%;
+    background: url("../images/Artboard\ 1\ copyd2.jpg");
+    background-size: cover;
+    left: 6px; top: 6px;
+    background-position: center top;
+    border-radius: 5px;
+    transition: 3s;
+}
+
+.work-content .work-desc{
+    flex-basis: 55%; padding-top: 20px;
+    
+}
+/* 불가리 */
+.work-content .work-desc p{font-size: 1em; padding: 10px 0 10px 60px; text-transform: uppercase; color: #434343;}
+.work-content .work-desc h3{font-size: 2em; padding: 10px 0 0px 60px;}
+.work-content .work-desc p:nth-child(2){font-size: 1.2em; font-weight: bold; color: #1f1f1f; }
+.work-content .work-desc p span{width: 20px; height: 20px; display: inline-block; vertical-align: middle;}
+/* vertical-align - inline-block에만 동작 */
+.work-content .work-desc p span:nth-child(1){background-color: #110f10;}
+.work-content .work-desc p span:nth-child(2){background-color: #f8f8f8; margin: 0 10px; border: 1px solid #ddd;}
+.work-content .work-desc p span:nth-child(3){background-color: #cc9999;}
+
+/* 삼성 */
+.work-content.b .work-img .pc{width: 85%; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; overflow: hidden;}
+.work-content.b .work-img .pc::after{
+    content: "";
+    position: absolute; width: 93%; height: 63%;
+    background: url("../images/Artboard\ 1\ copyd.jpg");
+    background-size: cover;
+    left: 15px; top: 18px;
+    background-position: center top;
+    transition: 5s;
+}
+.work-content.b .work-img > div:hover::after{
+    background-position: center bottom;
+}
+.work-content.b .work-img .tablte{position: absolute; width: 35%; right: 0; bottom: 0; overflow: hidden;}
+.work-content.b .work-img .tablte::after{
+    content: "";
+    position: absolute; width: 87.5%; height: 82%;
+    background: url("../images/Artboard\ 1\ copyd.jpg");
+    background-size: cover;
+    left: 14px; top: 21px;
+    background-position: center top;
+    transition: 3s;
+}
+
+.work-content.b .work-img .mobile{position: absolute; width: 23%; left: 0; bottom: 0; overflow: hidden;}
+.work-content.b .work-img .mobile::after{
+    content: "";
+    position: absolute; width: 91%; height: 94%;
+    background: url("../images/Artboard\ 1\ copyd.jpg");
+    background-size: cover;
+    left: 6px; top: 6px;
+    background-position: center top;
+    border-radius: 5px;
+    transition: 2s;
+}
+.work-content.b .work-desc p:nth-child(2){font-size: 1.2em; font-weight: bold; color: #035ea8 }
+.work-content.b .work-desc p span:nth-child(1){background-color: #0059a8;}
+.work-content.b .work-desc p span:nth-child(2){background-color: #f2f3f5; margin: 0 10px; border: 1px solid #ddd;}
+.work-content.b .work-desc p span:nth-child(3){background-color: #fefefe; border: 1px solid #ddd;}
+
+/* 써브웨이 */
+.work-content.c .work-img .pc{width: 85%; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; overflow: hidden;}
+.work-content.c .work-img .pc::after{
+    content: "";
+    position: absolute; width: 93%; height: 63%;
+    background: url("../images/screencapture-subway-co-kr-2023-02-07-23_44_54.png");
+    background-size: cover;
+    left: 15px; top: 18px;
+    background-position: center top;
+    transition: 2s;
+}
+
+.work-content.c .work-img > div:hover::after{
+    background-position: center bottom;
+}
+
+.work-content.c .work-desc p:nth-child(2){font-size: 1.2em; font-weight: bold; color: #009223 }
+.work-content.c .work-desc p span:nth-child(1){background-color: #009223;}
+.work-content.c .work-desc p span:nth-child(2){background-color: #ffce32; margin: 0 10px; border: 0}
+.work-content.c .work-desc p span:nth-child(3){background-color: #ffffff; border: 1px solid #ddd;}
+
+/* 앱 */
+.work-content.d .work-img .pc{width: 85%; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; overflow: hidden;}
+.work-content.d .work-img .pc::after{
+    content: "";
+    position: absolute; width: 93%; height: 63%;
+    background: url("../images/Artboard\ 2.jpg");
+    background-size: cover;
+    left: 15px; top: 18px;
+    background-position: center top;
+    transition: 10s;
+}
+.work-content.d .work-img > div:hover::after{
+    background-position: center bottom;
+}
+.work-content.d .work-desc p:nth-child(2){font-size: 1.2em; font-weight: bold; color: #FE5555 }
+.work-content.d .work-desc p span:nth-child(1){background-color: #FE5555;}
+.work-content.d .work-desc p span:nth-child(2){background-color: #f2f2f2; margin: 0 10px; border: 1px solid #ddd;}
+.work-content.d .work-desc p span:nth-child(3){background-color: #ffffff; border: 1px solid #ddd;}
+
+.work-content .work-desc .btn-wrap ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+
+.work-content .work-desc .btn-wrap ul li{
+    padding: 2% 6%;
+    background-color: #fff;
+    /* border: 1px solid #ddd; */
+    border-radius: 30px; cursor: pointer; transition: 0.5s;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.work-content .work-desc .btn-wrap ul li:nth-child(2){margin: 0 4%;}
+
+.work-content .work-desc .btn-wrap ul li a{
+    transition: 0.3s 0.1s;
+}
+
+.work-content .work-desc .btn-wrap ul li:hover{
+    box-shadow: -78px 0 0 0 #1f1f1f inset, 78px 0 0 0 #1f1f1f inset;
+}
+/* 삼성 */
+.work-content.b .work-desc .btn-wrap ul li:hover{
+    box-shadow: -78px 0 0 0 #0059a8 inset, 78px 0 0 0 #0059a8 inset;
+}
+/* 써브웨이 */
+.work-content.c .work-desc .btn-wrap ul li:hover{
+    box-shadow: -78px 0 0 0 #009223 inset, 78px 0 0 0 #009223 inset;
+}
+/* 앱 */
+.work-content.d .work-desc .btn-wrap ul li:hover{
+    box-shadow: -78px 0 0 0 #FE5555 inset, 78px 0 0 0 #FE5555 inset;
+}
+
+.work-content .work-desc .btn-wrap ul li:hover a{color:#fff;}
+
+/* .work .work-wrap .work-box{display: flex;  }
+
+.work .work-wrap .work-box img{width: 100px;} */
+/* .work .work-wrap .work-box .right{background-color: #ddd;} */
+
+
+
